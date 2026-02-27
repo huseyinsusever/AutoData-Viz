@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from locales import TRANSLATIONS
+import streamlit.components.v1 as components
 
 # Varsayılan Uygulama Adı
 APP_NAME = "DataZen"
@@ -49,6 +50,36 @@ with st.sidebar:
     else:
         df = None
         st.info(t["upload_info"])
+        
+    st.markdown("---")
+    st.header(t["support_us"])
+    
+    # Buy Me A Coffee Link
+    st.markdown(
+        f'<a href="https://www.buymeacoffee.com/YOUR_USERNAME" target="_blank">'
+        f'<img src="{t["buy_me_coffee"]}" alt="{t["buy_me_coffee_alt"]}" style="height: 40px !important;width: 145px !important;" >'
+        f'</a>',
+        unsafe_allow_html=True
+    )
+    
+    # Google AdSense Placeholder
+    st.markdown(f"*{t['ads_placeholder']}*")
+    # components.html(
+    #     f'''
+    #     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    #          crossorigin="anonymous"></script>
+    #     <ins class="adsbygoogle"
+    #          style="display:block"
+    #          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+    #          data-ad-slot="XXXXXXXXXX"
+    #          data-ad-format="auto"
+    #          data-full-width-responsive="true"></ins>
+    #     <script>
+    #          (adsbygoogle = window.adsbygoogle || []).push({{}});
+    #     </script>
+    #     ''',
+    #     height=100
+    # )
 
 # Ana Ekran
 if df is not None and uploaded_file is not None:
@@ -148,3 +179,5 @@ if df is not None and uploaded_file is not None:
 
 else:
     st.write(t["wait_msg"])
+
+
