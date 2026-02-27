@@ -32,7 +32,11 @@ TRANSLATIONS = {
         "plot_btn": "Grafiği Çiz",
         # Download
         "download_header": "💾 Temizlenmiş Veriyi İndir",
-        "download_btn": "CSV Olarak İndir"
+        "download_btn": "CSV Olarak İndir",
+        "support_us": "💖 Bize Destek Olun",
+        "buy_me_coffee": "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png",
+        "buy_me_coffee_alt": "☕ Bana Bir Kahve Ismarla",
+        "ads_placeholder": "Google AdSense Reklam Alanı"
     },
     "EN": {
         "title": "📊 {app_name}: Data Analysis & Cleaning Tool",
@@ -67,7 +71,11 @@ TRANSLATIONS = {
         "plot_btn": "Generate Chart",
         # Download
         "download_header": "💾 Download Cleaned Data",
-        "download_btn": "Download as CSV"
+        "download_btn": "Download as CSV",
+        "support_us": "💖 Support Us",
+        "buy_me_coffee": "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png",
+        "buy_me_coffee_alt": "☕ Buy Me A Coffee",
+        "ads_placeholder": "Google AdSense Ad Space"
     },
     "JA": {
         "title": "📊 {app_name}: データ分析・クリーニングツール",
@@ -102,7 +110,11 @@ TRANSLATIONS = {
         "plot_btn": "グラフを作成",
         # Download
         "download_header": "💾 クリーンアップデータをダウンロード",
-        "download_btn": "CSVとしてダウンロード"
+        "download_btn": "CSVとしてダウンロード",
+        "support_us": "💖 サポート",
+        "buy_me_coffee": "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png",
+        "buy_me_coffee_alt": "☕ コーヒーをおごる",
+        "ads_placeholder": "広告スペース (Google AdSense)"
     },
     "KO": {
         "title": "📊 {app_name}: 데이터 분석 및 정리 도구",
@@ -137,7 +149,11 @@ TRANSLATIONS = {
         "plot_btn": "차트 생성",
         # Download
         "download_header": "💾 정리된 데이터 다운로드",
-        "download_btn": "CSV로 다운로드"
+        "download_btn": "CSV로 다운로드",
+        "support_us": "💖 지원하기",
+        "buy_me_coffee": "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png",
+        "buy_me_coffee_alt": "☕ 커피 사주기",
+        "ads_placeholder": "광고 공간 (Google AdSense)"
     },
     "ZH": {
         "title": "📊 {app_name}：数据分析与清洗工具",
@@ -172,6 +188,12 @@ TRANSLATIONS = {
         "plot_btn": "生成图表",
         # Download
         "download_header": "💾 下载清洗后的数据",
-        "download_btn": "下载为 CSV"
+        "download_btn": "下载为 CSV",
+        "support_us": "💖 支持我们",
+        "buy_me_coffee": "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png",
+        "buy_me_coffee_alt": "☕ 请我喝杯咖啡",
+        "ads_placeholder": "广告位 (Google AdSense)"
     }
 }
+
+
