@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VORTEXIA - Neon Defender</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="overlay">
+        <h1 class="glitch-text" data-text="VORTEXIA">VORTEXIA</h1>
+        <div class="form-group">
+            <input type="text" id="usernameInput" placeholder="Enter Pilot Name..." maxlength="12">
+            <button id="startGameBtn">ENGAGE</button>
+        </div>
+        <div class="leaderboard-section">
+            <h2>GLOBAL COMMANDERS</h2>
+            <ul id="mainLeaderboard">
+                <!-- Scores injected here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- UI -->
+    <div id="ui" class="hidden">
+        <div class="stat-bars">
+            <div class="bar-container">
+                <span class="bar-label">HP</span>
+                <div class="bar">
+                    <div id="healthBar" class="progress-fill hp"></div>
+                </div>
+            </div>
+            <div class="bar-container">
+                <span class="bar-label">XP</span>
+                <div class="bar">
+                    <div id="xpBar" class="progress-fill xp"></div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <p>COMMANDER: <span id="currentPlayerName">---</span></p>
+            <p>LEVEL: <span id="currentLevel">1</span></p>
+            <p>SCORE: <span id="score">0</span></p>
+        </div>
+    </div>
+
+    <!-- Level Up / Upgrade Menu -->
+    <div id="upgradeScreen" class="overlay hidden">
+        <h1>LEVEL UP!</h1>
+        <p>Choose an upgrade:</p>
+        <div id="upgradeOptions" class="upgrade-grid">
+            <!-- Cards will be injected by JS -->
+        </div>
+    </div>
+
+    <!-- Paywall Screen -->
+    <div id="paywallScreen" class="overlay hidden">
+        <h1 class="glitch">DEMO COMPLETE</h1>
+        <p>You've reached the maximum level for the demo version.</p>
+        <div class="paywall-perks">
+            <p>🔓 Unlimited Levels</p>
+            <p>🔓 Boss Battles</p>
+            <p>🔓 Secret Weapons</p>
+        </div>
+        <button id="buyFullBtn">GET FULL VERSION</button>
+        <button id="menuBtn">BACK TO MENU</button>
+    </div>
+
+    <!-- Joystick for Mobile -->
+    <div id="joystick-base">
+        <div id="joystick-stick"></div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="overlay hidden">
+        <h1>COMMAND LOST</h1>
+        <p>Mission Failed. Final Score: <span id="finalScore">0</span></p>
+        <div class="leaderboard-section">
+            <h2>LEADERBOARD</h2>
+            <ul id="gameOverLeaderboard">
+                <!-- Scores injected here -->
+            </ul>
+        </div>
+        <div class="button-group">
+            <button id="restartBtn">INITIATE RE-ENTRY</button>
+            <button id="changeUserBtn">CHANGE PILOT</button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
