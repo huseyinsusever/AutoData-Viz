@@ -1,14 +1,20 @@
-import streamlit as st
+mport streamlit as st
 import pandas as pd
 import plotly.express as px
 from locales import TRANSLATIONS
 import streamlit.components.v1 as components
 
-# Varsayılan Uygulama Adı
+# Varsayılan Uygulama Adı ve AdSense Ayarları
 APP_NAME = "DataZen"
+ADSENSE_PUB_ID = "ca-pub-XXXXXXXXXXXXXXXX"  # Burayı kendi yayıncı kimliğinizle değiştirin
+ADSENSE_SLOT_ID = "XXXXXXXXXX"              # Burayı kendi reklam alanı kimliğinizle değiştirin
 
-# Sayfa Ayarları
-st.set_page_config(page_title=APP_NAME, page_icon="📊", layout="wide")
+# Sayfa Ayarları (SEO için başlık güncellendi)
+st.set_page_config(
+    page_title=f"{APP_NAME} - Otomatik Veri Analizi ve Temizleme", 
+    page_icon="📊", 
+    layout="wide"
+)
 
 # Dil Oturum Yönetimi (Session State)
 if 'lang' not in st.session_state:
@@ -62,24 +68,24 @@ with st.sidebar:
         unsafe_allow_html=True
     )
     
-    # Google AdSense Placeholder
+    # Google AdSense Reklam Alanı
     st.markdown(f"*{t['ads_placeholder']}*")
-    # components.html(
-    #     f'''
-    #     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-    #          crossorigin="anonymous"></script>
-    #     <ins class="adsbygoogle"
-    #          style="display:block"
-    #          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-    #          data-ad-slot="XXXXXXXXXX"
-    #          data-ad-format="auto"
-    #          data-full-width-responsive="true"></ins>
-    #     <script>
-    #          (adsbygoogle = window.adsbygoogle || []).push({{}});
-    #     </script>
-    #     ''',
-    #     height=100
-    # )
+    components.html(
+        f'''
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_PUB_ID}"
+             crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="{ADSENSE_PUB_ID}"
+             data-ad-slot="{ADSENSE_SLOT_ID}"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({{}});
+        </script>
+        ''',
+        height=300 # Reklamın sığması için yüksekliği artırdık
+    )
 
 # Ana Ekran
 if df is not None and uploaded_file is not None:
@@ -179,5 +185,7 @@ if df is not None and uploaded_file is not None:
 
 else:
     st.write(t["wait_msg"])
+
+
 
 
