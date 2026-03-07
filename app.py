@@ -1,4 +1,4 @@
-mport streamlit as st
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 from locales import TRANSLATIONS
@@ -185,6 +185,7 @@ if df is not None and uploaded_file is not None:
 
 else:
     st.write(t["wait_msg"])
+
 
 
 
